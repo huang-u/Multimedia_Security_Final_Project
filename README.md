@@ -1,27 +1,28 @@
 # Multimedia_Security_Final_Project
-## LSB-Steganography
+## LSB
 使用最低有效位（LSB）在數字數據的二進制表示中嵌入額外的信息，這樣的技術可以用來隱藏訊息，而不引起人眼或人耳的感知變化。<br>
-直接跑Lsb.py即可
+直接跑main.py即可
 <p>
 請選擇功能：<br>
 1.隱寫<br>
-使用Key("txt\secret.txt")加密明文("image\lena.bmp")，生成密文("image\res_encode.png")<br>
-<img src='Multimedia_Security/LSB-Steganography/image/lena.png' width='200'> <img src='Multimedia_Security/LSB-Steganography/image/res_encode.png' width='200'><br>
+將watermark的高三位信息替換掉background的低三位信息<br>
+<img src='Multimedia_Security/LSB/image/Marked.jpg' width='200'> <img src='Multimedia_Security/LSB/image/WaterMark.jpg' width='200'><br>
   
 2.攻擊<br>
-attacks = ['gaussian_noise', 'salt_and_pepper_noise', 'mean_filter', 'median_filter', 'high_pass_filter', 'rotate_image']<br>
-利用以上攻擊方法，攻擊"image\res_encode.png"，<br>
-並產生統計圖("result\all_results.png")及數據("result\attack_results.txt")及攻擊後的個別圖片("result\attacks_name.png")<br>
+attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter', 'median_filter', 'high_pass_filter', 'rotate_image']<br>
+利用以上攻擊方法，攻擊"image\Marked.jpg"，<br>
+並產生統計圖("result\Marked_Attack\all_results.jpg")及數據("result\Marked_Attack\attack_results.txt")及攻擊後的個別圖片("image\\{attacks_name}.png")<br>
 <!--![all_results](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/2482891b-c2cb-4dda-b2c4-550e478a38f7)>-->
-<img src='Multimedia_Security/LSB-Steganography/result/all_attack_results.png' width=70%><br>
+<img src='Multimedia_Security/LSB/result/Marked_Attack/all_attack_results.jpg' width=70%><br>
 
 3.提取<br>
-解出明文("image\res_encode.png")，並存Key("txt\secret_out.txt")<br>
-![secret](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/2992d843-85c0-4295-8e9c-4229e81c598e)
+從被攻擊的圖中取出浮水印，並對其計算SSIM。("result\Attack_Extract\ssim.txt")<br>
+
 
 4.退出<br>
 結束應用<br>
-![end](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/18779d0a-c85b-4b55-8479-e68331f18f2b)
+![image](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/aa5948d4-4ee3-44c3-981c-e2b0b09bb790)
+
 </p>
 
 ## Shift-Histogram
