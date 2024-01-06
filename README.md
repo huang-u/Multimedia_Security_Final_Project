@@ -17,6 +17,28 @@ attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter'
 
 3.提取<br>
 從被攻擊的圖中取出浮水印，並對其計算SSIM。("result\Attack_Extract\ssim.txt")<br>
+Extract Results for LSB
+
+Attack Type: no_attack
+SSIM: 0.015352597439659377
+
+Attack Type: gaussian_noise
+SSIM: 0.008494161093138454
+
+Attack Type: salt_and_pepper_noise
+SSIM: 0.0071360329227082705
+
+Attack Type: mean_filter
+SSIM: 0.006409435783714635
+
+Attack Type: median_filter
+SSIM: 0.011256819544516978
+
+Attack Type: high_pass_filter
+SSIM: 0.010998056046992786
+
+Attack Type: rotate_image
+SSIM: 0.0039900751036624086
 
 
 4.退出<br>
