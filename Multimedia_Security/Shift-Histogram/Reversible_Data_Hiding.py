@@ -148,7 +148,7 @@ if __name__ == '__main__':
 			attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter',
                        'median_filter', 'high_pass_filter', 'rotate_image']
             
-			with open('Shift-Histogram/result/Attack_Extract/ssim.txt', 'w') as file:
+			with open('Shift-Histogram/result/Attack_Extract/ber.txt', 'w') as file:
 				file.write('Extract Results for Shift-Histogram\n\n')
 				for i in attacks:
 					# 讀取攻擊後的圖像
