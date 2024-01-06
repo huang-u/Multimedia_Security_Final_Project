@@ -71,29 +71,40 @@ def rotate_image(image, angle=45):
     return cv2.warpAffine(image, rotation_matrix, (col, row))
 
 def attack_and_evaluate(attack_type, original_image):
+    if attack_type == 'no_attack':
+        # 在這裡處理無攻擊的情況，直接返回原始圖像的結果
+        psnr = PSNR(original_image, original_image)
+        ssim = SSIM(original_image, original_image)
+        ber = BER(attack_type, original_image, original_image)
+        # 保存攻擊後的圖像
+        attacked_image_filename = 'no_attack.jpg'
+        attacked_image_path = os.path.join('Shift-Histogram/image/attack_result', 'no_attack.jpg')
+        cv2.imwrite(attacked_image_path, original_image)
+        return original_image, psnr, ssim, ber
+    
     attacked_image = globals()[attack_type](original_image)
     psnr = PSNR(original_image, attacked_image)
     ssim = SSIM(original_image, attacked_image)
     ber = BER(attack_type, original_image, attacked_image)
 
     # 保存攻擊後的圖像
-    attacked_image_filename = f'{attack_type}.png'
-    attacked_image_path = os.path.join('Shift-Histogram/result', attacked_image_filename)
+    attacked_image_filename = f'{attack_type}.jpg'
+    attacked_image_path = os.path.join('Shift-Histogram/image/Attack_result', attacked_image_filename)
     cv2.imwrite(attacked_image_path, attacked_image)
     return attacked_image, psnr, ssim, ber
 
 # 主程序
 def main():
     # 載入原始圖像(shift過後)
-    original_image = cv2.imread("Shift-Histogram/image/Marked_Image.png", 0)
+    original_image = cv2.imread("Shift-Histogram/image/Marked.png", 0)
 
-    attacks = ['gaussian_noise', 'salt_and_pepper_noise', 'mean_filter',
+    attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter',
                'median_filter', 'high_pass_filter', 'rotate_image']
 
 
     # 調整行和列的數量
     num_rows = 2
-    num_cols = 3
+    num_cols = 4
 
     plt.figure(figsize=(10, 6))
     plt.subplot(num_rows, num_cols, 1)
@@ -105,19 +116,19 @@ def main():
         
         plt.subplot(num_rows, num_cols, i)
         plt.imshow(attacked_image, cmap='gray')
-        plt.title(f'{attack_type}\nPSNR: {psnr:.2f}, SSIM: {ssim:.2f}, BER: {ber:.4f}')
+        plt.title(f'{attack_type}\nPSNR: {psnr:.2f}, SSIM: {ssim:.2f}')
     
     plt.tight_layout()  # 調整子圖之間的間距
-    plt.savefig(os.path.join('Shift-Histogram/result', 'all_attack_results.png'))
+    plt.savefig(os.path.join('Shift-Histogram/result/Marked_Attack', 'all_attack_results.png'))
     plt.show()
 
     # Write results to a text file
-    with open('Shift-Histogram/result/attack_results.txt', 'w') as f:
+    with open('Shift-Histogram/result/Marked_Attack/attack_results.txt', 'w') as f:
         f.write('Attack Results for Shift-Histogram\n\n')
         for attack_type in attacks:
             attacked_image, psnr, ssim, ber = attack_and_evaluate(attack_type, original_image)
             f.write(f'Attack Type: {attack_type}\n')
-            f.write(f'PSNR: {psnr:.2f}, SSIM: {ssim:.2f}, BER: {ber:.4f}\n\n')
+            f.write(f'PSNR: {psnr}, SSIM: {ssim:.2f}\n\n')
 
 if __name__ == "__main__":
     main()
