@@ -44,16 +44,11 @@ attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter'
 <img src='Multimedia_Security/Shift-Histogram/result/Marked_Attack/all_attack_results.png' width=70%><br>
 
 3.提取<br>
-從被攻擊的圖中取出浮水印，並對其計算SSIM。("result\Attack_Extract\ssim.txt")<br>
-![secret](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/013fa2d2-83ea-445c-bbbb-b77076fe0b59)
+從被攻擊的圖中取出浮水印，並對其計算BER。("result\Attack_Extract\ber.txt")<br>
+<!--![secret](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/013fa2d2-83ea-445c-bbbb-b77076fe0b59)-->
 
 4.退出<br>
 結束應用<br>
-![end](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/b2082429-6257-4f95-af83-c924c6f4094b)
-</p>
+![image](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/e394e658-287a-4df6-8daf-0aa790ba7c28)
 
-## 攻擊過後數據
-<p>
-  
-![image](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/60953120-c01b-40bb-bd54-4197123516b4)
 </p>
