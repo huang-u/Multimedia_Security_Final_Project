@@ -139,10 +139,10 @@ if __name__ == '__main__':
 			np.savetxt('Shift-Histogram/txt/secret.txt', Hidden_Data, fmt='%d')	#儲存數據
 			pixelSequence, data_length = embedding(pixelSequence, MaxPoint, Hidden_Data)	# 數據嵌入
 			cv.imwrite('Shift-Histogram/image/Marked.png', pixelSequence.reshape(h, w), [cv.IMWRITE_PNG_COMPRESSION, 0]) # 生成處理圖片
-			print("在image中已生成Marked.png")
+			print("已生成，位於Shift-Histogram\image\Marked.png\n")
 		elif choice=='2':
 			Attack.main()
-			print('已攻擊並保存到image中')
+			print('攻擊並保存攻擊後的圖，位於Shift-Histogram\image\Attack_result\n')
 		elif choice=='3':
 			#----------[part.2 recover data]
 			attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter',
