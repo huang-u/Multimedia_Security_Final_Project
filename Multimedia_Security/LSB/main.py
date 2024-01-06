@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 import Attack
+import os
 from skimage import metrics
 
 # =====================================
@@ -123,22 +124,19 @@ if __name__ == '__main__':
                     synthesis_path = f'LSB/image/Attack_result/{i}.jpg'
                     synthesis = cv2.imread(synthesis_path)
 
+                    # 保存攻擊後的圖像
                     extract_watermark, extract_background = lsb.lsb_extract(synthesis, embed_bit)
                     extract_watermark = extract_watermark[:260, :260, :]
+
+                    # 保存攻擊後的圖像
+                    attacked_image_filename = f'{i}.jpg'
+                    attacked_image_path = os.path.join('LSB/image/Extract_watermark', attacked_image_filename)
+                    cv2.imwrite(attacked_image_path, extract_watermark)
 
                     # 計算SSIM
                     ssim = SSIM(watermark, extract_watermark)
                     file.write(f'Attack Type: {i}\n')
                     file.write(f'SSIM: {ssim}\n\n')
-
-            # imgs = [background_backup, watermark_backup, synthesis,extract_watermark,  extract_background]
-            # title = ["Origin_Img", "WaterMark", "+WaterMark","WaterMark", "Get_Img"]
-            # for i in range(len(imgs)):
-            #     plt.subplot(2, 3, i + 1)
-            #     plt.imshow(imgs[i])
-            #     plt.axis("off")
-            #     plt.title(title[i])
-            # plt.show()
 
             print('已儲存SSIM，位於LSB\image\Attack_result\ssim_results.txt\n')
         else:
