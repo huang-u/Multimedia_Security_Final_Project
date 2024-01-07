@@ -15,31 +15,54 @@ attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter'
 <!--![all_results](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/2482891b-c2cb-4dda-b2c4-550e478a38f7)>-->
 <img src='Multimedia_Security/LSB/result/Marked_Attack/all_attack_results.jpg' width=70%><br>
 
+Attack Results for LSB<br><br>
+
+Attack Type: no_attack<br>
+PSNR: inf, SSIM: 1.00<br><br>
+
+Attack Type: gaussian_noise<br>
+PSNR: 20.228239685521036, SSIM: 0.29<br><br>
+
+Attack Type: salt_and_pepper_noise<br>
+PSNR: 19.4810084430014, SSIM: 0.39<br><br>
+
+Attack Type: mean_filter<br>
+PSNR: 35.64094299879962, SSIM: 0.95<br><br>
+
+Attack Type: median_filter<br>
+PSNR: 37.77993611415274, SSIM: 0.96<br><br>
+
+Attack Type: high_pass_filter<br>
+PSNR: 6.456283796642342, SSIM: 0.12<br><br>
+
+Attack Type: rotate_image<br>
+PSNR: 10.574410910655256, SSIM: 0.28<br><br>
+
 3.提取<br>
 從被攻擊的圖中取出浮水印，並對其計算SSIM。("result\Attack_Extract\ssim.txt")<br>
-Extract Results for LSB
 
-Attack Type: no_attack
-SSIM: 0.015352597439659377
+Extract Results for LSB<br><br>
 
-Attack Type: gaussian_noise
-SSIM: 0.008494161093138454
+Attack Type: no_attack<br>
+SSIM: 0.015352597439659377<br><br>
 
-Attack Type: salt_and_pepper_noise
-SSIM: 0.0071360329227082705
+Attack Type: gaussian_noise<br>
+SSIM: 0.008494161093138454<br><br>
 
-Attack Type: mean_filter
-SSIM: 0.006409435783714635
+Attack Type: salt_and_pepper_noise<br>
+SSIM: 0.0071360329227082705<br><br>
 
-Attack Type: median_filter
-SSIM: 0.011256819544516978
+Attack Type: mean_filter<br>
+SSIM: 0.006409435783714635<br><br>
 
-Attack Type: high_pass_filter
-SSIM: 0.010998056046992786
+Attack Type: median_filter<br>
+SSIM: 0.011256819544516978<br><br>
 
-Attack Type: rotate_image
-SSIM: 0.0039900751036624086
+Attack Type: high_pass_filter<br>
+SSIM: 0.010998056046992786<br><br>
 
+Attack Type: rotate_image<br>
+SSIM: 0.0039900751036624086<br><br>
 
 4.退出<br>
 結束應用<br>
