@@ -15,7 +15,7 @@ attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter'
 <!--![all_results](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/2482891b-c2cb-4dda-b2c4-550e478a38f7)>-->
 <img src='Multimedia_Security/LSB/result/Marked_Attack/all_attack_results.jpg' width=70%><br>
 
-Attack Results for LSB<br><br>
+Attack Results for LSB<br>
 
 Attack Type: no_attack<br>
 PSNR: inf, SSIM: 1.00<br><br>
@@ -41,7 +41,7 @@ PSNR: 10.574410910655256, SSIM: 0.28<br><br>
 3.提取<br>
 從被攻擊的圖中取出浮水印，並對其計算SSIM。("result\Attack_Extract\ssim.txt")<br>
 
-Extract Results for LSB<br><br>
+Extract Results for LSB<br>
 
 Attack Type: no_attack<br>
 SSIM: 0.015352597439659377<br><br>
