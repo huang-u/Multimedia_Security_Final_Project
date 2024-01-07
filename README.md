@@ -18,25 +18,25 @@ attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter'
 Attack Results for LSB<br>
 
 Attack Type: no_attack<br>
-PSNR: inf, SSIM: 1.00<br><br>
+PSNR: inf, SSIM: 1.0<br><br>
 
 Attack Type: gaussian_noise<br>
-PSNR: 20.228239685521036, SSIM: 0.29<br><br>
+PSNR: 20.23981785210106, SSIM: 0.28832284946794356<br><br>
 
 Attack Type: salt_and_pepper_noise<br>
-PSNR: 19.4810084430014, SSIM: 0.39<br><br>
+PSNR: 19.390703024359855, SSIM: 0.3873352626308505<br><br>
 
 Attack Type: mean_filter<br>
-PSNR: 35.64094299879962, SSIM: 0.95<br><br>
+PSNR: 35.64094299879962, SSIM: 0.9485151200508769<br><br>
 
 Attack Type: median_filter<br>
-PSNR: 37.77993611415274, SSIM: 0.96<br><br>
+PSNR: 37.77993611415274, SSIM: 0.9569102603020584<br><br>
 
 Attack Type: high_pass_filter<br>
-PSNR: 6.456283796642342, SSIM: 0.12<br><br>
+PSNR: 6.456283796642342, SSIM: 0.11993592433976924<br><br>
 
 Attack Type: rotate_image<br>
-PSNR: 10.574410910655256, SSIM: 0.28<br><br>
+PSNR: 10.574410910655256, SSIM: 0.2803647614167634<br><br>
 
 3.提取<br>
 從被攻擊的圖中取出浮水印，並對其計算SSIM。("result\Attack_Extract\ssim.txt")<br>
@@ -87,10 +87,54 @@ attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter'
 並產生統計圖("result\Marked_Attack\all_attack_results.png")及數據("result\Marked_Attack\attack_results.txt")及攻擊後的個別圖片("image\Attack_result\\{attacks_name}.jpg")<br>
 <!--![all_attack_results](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/cd3156cf-ee6b-4eac-b1f2-76a928fcf2cf)-->
 <img src='Multimedia_Security/Shift-Histogram/result/Marked_Attack/all_attack_results.png' width=70%><br>
+Attack Results for Shift-Histogram<br>
+
+Attack Type: no_attack<br>
+PSNR: inf, SSIM: 1.0<br><br>
+
+Attack Type: gaussian_noise<br>
+PSNR: 20.23271008722442, SSIM: 0.28798474104589006<br><br>
+
+Attack Type: salt_and_pepper_noise<br>
+PSNR: 19.4982824314409, SSIM: 0.39654733966451616<br><br>
+
+Attack Type: mean_filter<br>
+PSNR: 35.782896570076595, SSIM: 0.9513022495580442<br><br>
+
+Attack Type: median_filter<br>
+PSNR: 38.04640983929006, SSIM: 0.9597879802025877<br><br>
+
+Attack Type: high_pass_filter<br>
+PSNR: 6.513695576797679, SSIM: 0.11993722177372275<br><br>
+
+Attack Type: rotate_image<br>
+PSNR: 10.57415453970766, SSIM: 0.28074561350306537<br><br>
 
 3.提取<br>
 從被攻擊的圖中取出浮水印，並對其計算BER。("result\Attack_Extract\ber.txt")<br>
 <!--![secret](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/013fa2d2-83ea-445c-bbbb-b77076fe0b59)-->
+Extract Results for Shift-Histogram<br>
+
+Attack Type: no_attack<br>
+BER: 0.9955863952636719<br><br>
+
+Attack Type: gaussian_noise<br>
+BER: 0.9960060119628906<br><br>
+
+Attack Type: salt_and_pepper_noise<br>
+BER: 0.9961700439453125<br><br>
+
+Attack Type: mean_filter<br>
+BER: 0.9956550598144531<br><br>
+
+Attack Type: median_filter<br>
+BER: 0.995452880859375<br><br>
+
+Attack Type: high_pass_filter<br>
+BER: 0.9996681213378906<br><br>
+
+Attack Type: rotate_image<br>
+BER: 0.9961471557617188<br><br>
 
 4.退出<br>
 結束應用<br>
