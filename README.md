@@ -11,10 +11,10 @@
 2.攻擊<br>
 attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter', 'median_filter', 'high_pass_filter', 'rotate_image']<br>
 利用以上攻擊方法，攻擊"image\Marked.jpg"，<br>
-並產生統計圖("result\Marked_Attack\all_results.jpg")及數據("result\Marked_Attack\attack_results.txt")及攻擊後的個別圖片("image\Attack_result\\{attacks_name}.png")<br>
+並產生統計圖("result\Marked_Attack\all_results.jpg")及數據("result\Marked_Attack\attack_results.txt")及攻擊後的個別圖片("image\Attack_result\\{attacks_name}.jpg")<br>
 <!--![all_results](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/2482891b-c2cb-4dda-b2c4-550e478a38f7)>-->
 <img src='Multimedia_Security/LSB/result/Marked_Attack/all_attack_results.jpg' width=70%><br>
-
+嵌入的圖Marked.jpg與攻擊後的個別圖片Attack_result\\{attacks_name}.jpg做PSNR計算
 Attack Results for LSB<br>
 
 Attack Type: no_attack<br>
@@ -40,7 +40,7 @@ PSNR: 10.574410910655256, SSIM: 0.2803647614167634<br><br>
 
 3.提取<br>
 從被攻擊的圖中取出浮水印，並對其計算SSIM。("result\Attack_Extract\ssim.txt")<br>
-
+原浮水印watermark.jpg與攻擊後取出的圖Extract_watermark\\{attacks_name}.jpg做SSIM計算
 Extract Results for LSB<br>
 
 Attack Type: no_attack<br>
@@ -87,6 +87,7 @@ attacks = ['no_attack', 'gaussian_noise', 'salt_and_pepper_noise', 'mean_filter'
 並產生統計圖("result\Marked_Attack\all_attack_results.png")及數據("result\Marked_Attack\attack_results.txt")及攻擊後的個別圖片("image\Attack_result\\{attacks_name}.jpg")<br>
 <!--![all_attack_results](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/cd3156cf-ee6b-4eac-b1f2-76a928fcf2cf)-->
 <img src='Multimedia_Security/Shift-Histogram/result/Marked_Attack/all_attack_results.png' width=70%><br>
+嵌入的圖Marked.png與攻擊後的個別圖片Attack_result\\{attacks_name}.jpg做PSNR計算
 Attack Results for Shift-Histogram<br>
 
 Attack Type: no_attack<br>
@@ -113,6 +114,7 @@ PSNR: 10.57415453970766, SSIM: 0.28074561350306537<br><br>
 3.提取<br>
 從被攻擊的圖中取出浮水印，並對其計算BER。("result\Attack_Extract\ber.txt")<br>
 <!--![secret](https://github.com/huang-u/Multimedia_Security_Final_Project/assets/81971590/013fa2d2-83ea-445c-bbbb-b77076fe0b59)-->
+
 Extract Results for Shift-Histogram<br>
 
 Attack Type: no_attack<br>
