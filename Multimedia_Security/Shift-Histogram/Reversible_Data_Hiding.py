@@ -160,7 +160,7 @@ if __name__ == '__main__':
 					pixelSequence = recoverImg(pixelSequence,MaxPoint,MinPoint,BookKeeping)  # 恢復原圖像信息
 
 					# 保存提取後的數據
-					np.savetxt(f'Shift-Histogram/txt/Extract_Data_{i}.txt', Recover_Data, fmt='%d')
+					np.savetxt(f'Shift-Histogram/result/Attack_Extract/Extract_Data_{i}.txt', Recover_Data, fmt='%d')
 
 					# 計算 BER
 					ber = BER(Hidden_Data, originpixel.reshape(h, w), pixelSequence.reshape(h, w))
