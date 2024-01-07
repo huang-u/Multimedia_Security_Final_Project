@@ -1,0 +1,23 @@
+Attack Results for LSB
+
+Attack Type: no_attack
+PSNR: inf, SSIM: 1.0
+
+Attack Type: gaussian_noise
+PSNR: 20.23138694193287, SSIM: 0.2882501321941323
+
+Attack Type: salt_and_pepper_noise
+PSNR: 19.433705048754497, SSIM: 0.38565704024960723
+
+Attack Type: mean_filter
+PSNR: 35.64094299879962, SSIM: 0.9485151200508769
+
+Attack Type: median_filter
+PSNR: 37.77993611415274, SSIM: 0.9569102603020584
+
+Attack Type: high_pass_filter
+PSNR: 6.456283796642342, SSIM: 0.11993592433976924
+
+Attack Type: rotate_image
+PSNR: 10.574410910655256, SSIM: 0.2803647614167634
+
