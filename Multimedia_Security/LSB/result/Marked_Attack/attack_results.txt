@@ -4,10 +4,10 @@ Attack Type: no_attack
 PSNR: inf, SSIM: 1.00
 
 Attack Type: gaussian_noise
-PSNR: 20.226226763314855, SSIM: 0.29
+PSNR: 20.21632798507809, SSIM: 0.29
 
 Attack Type: salt_and_pepper_noise
-PSNR: 19.347036934766294, SSIM: 0.39
+PSNR: 19.51814630752586, SSIM: 0.40
 
 Attack Type: mean_filter
 PSNR: 35.64094299879962, SSIM: 0.95
