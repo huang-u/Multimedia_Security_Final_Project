@@ -159,11 +159,6 @@ if __name__ == '__main__':
 					pixelSequence, Recover_Data = extracting(pixelSequence, MaxPoint, data_length)  # 提取隱藏數據
 					pixelSequence = recoverImg(pixelSequence,MaxPoint,MinPoint,BookKeeping)  # 恢復原圖像信息
 
-					# 保存攻擊後的圖像
-					attacked_image_filename = f'{i}.jpg'
-					attacked_image_path = os.path.join('Shift-Histogram/image/Extract_watermark', attacked_image_filename)
-					cv.imwrite(attacked_image_path, pixelSequence)
-
 					# 保存提取後的數據
 					np.savetxt(f'Shift-Histogram/txt/Extract_Data_{i}.txt', Recover_Data, fmt='%d')
 
